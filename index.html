@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Julian Gruber</title>
+  <style>
+    body {
+      margin: 0;
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      text-align: center;
+    }
+    article {
+      height: 100%;
+      width: 100%;
+      text-align: center;
+    }
+    article img {
+      max-width: 100%;
+      max-height: 100vh;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const elements = [...document.querySelectorAll('article')]
+
+      const firstInViewIndex = () => {
+        return elements.findIndex(element => {
+          const { top, bottom } = element.getBoundingClientRect()
+          return bottom > 0 && top < window.innerHeight
+        })
+      }
+      const scrollToIndex = index =>
+        elements[index]?.scrollIntoView({ behavior: 'instant' })
+      const next = () => scrollToIndex(firstInViewIndex() + 1)
+      const previous = () => scrollToIndex(firstInViewIndex() - 1)
+
+      document.addEventListener('keydown', ev => {
+        if (![
+          32, // space
+          40, // arrow down
+          39 // arrow right
+        ].includes(ev.keyCode)) return
+        ev.preventDefault()
+        next()
+      })
+      document.addEventListener('keydown', ev => {
+        if (![
+          37, // arrow left
+          38 // arrow up
+        ].includes(ev.keyCode)) return
+        ev.preventDefault()
+        previous()
+      })
+    })
+  </script>
+</head>
+<body>
+  <article>
+  <img src="photographs/DSC06147.jpg" />
+</article>
+<article>
+  <img src="photographs/DSC06022.jpg" />
+</article>
+<article>
+  <img src="photographs/DSC05901.jpg" />
+</article>
+<article>
+  <img src="photographs/DSC05894.jpg" />
+</article>
+<article>
+  <img src="photographs/DSC05888.jpg" />
+</article>
+<article>
+  <img src="photographs/DSC05809.jpg" />
+</article>
+<article>
+  <img src="photographs/DSC05783.jpg" />
+</article>
+<article>
+  <img src="photographs/DSC05771.jpg" />
+</article>
+<article>
+  <img src="photographs/DSC05709.jpg" />
+</article>
+<article>
+  <img src="photographs/DSC05707.jpg" />
+</article>
+<article>
+  <img src="photographs/DSC05675.jpg" />
+</article>
+<article>
+  <img src="photographs/DSC05553.jpg" />
+</article>
+<article>
+  <img src="photographs/DSC05543.jpg" />
+</article>
+<article>
+  <img src="photographs/DSC05520.jpg" />
+</article>
+<article>
+  <img src="photographs/DSC05478.jpg" />
+</article>
+<article>
+  <img src="photographs/DSC05466.jpg" />
+</article>
+<article>
+  <img src="photographs/DSC05458.jpg" />
+</article>
+<article>
+  <img src="photographs/DSC05424-3.jpg" />
+</article>
+<article>
+  <img src="photographs/DSC05272.jpg" />
+</article>
+<article>
+  <img src="photographs/DSC05043.jpg" />
+</article>
+<article>
+  <img src="photographs/DSC05003-2.jpg" />
+</article>
+<article>
+  <img src="photographs/DSC04986-2.jpg" />
+</article>
+<article>
+  <img src="photographs/DSC04934-2.jpg" />
+</article>
+<article>
+  <img src="photographs/DSC04907.jpg" />
+</article>
+<article>
+  <img src="photographs/DSC04560.jpg" />
+</article>
+<article>
+  <img src="photographs/DSC04367.jpg" />
+</article>
+<article>
+  <img src="photographs/DSC04338.jpg" />
+</article>
+<article>
+  <img src="photographs/DSC04106-2.jpg" />
+</article>
+<article>
+  <img src="photographs/DSC04000.jpg" />
+</article>
+<article>
+  <img src="photographs/DSC03996.jpg" />
+</article>
+<article>
+  <img src="photographs/DSC03986.jpg" />
+</article>
+<article>
+  <img src="photographs/DSC03814.jpg" />
+</article>
+<article>
+  <img src="photographs/DSC03761.jpg" />
+</article>
+<article>
+  <img src="photographs/DSC03703-2.jpg" />
+</article>
+<article>
+  <img src="photographs/DSC03068.jpg" />
+</article>
+<article>
+  <img src="photographs/DSC03052.jpg" />
+</article>
+<article>
+  <img src="photographs/DSC02245.jpg" />
+</article>
+<article>
+  <img src="photographs/DSC02011.jpg" />
+</article>
+  <p>All rights reserved. Copyright 2024 <a href="mailto:mail@juliangruber.com">Julian Gruber</a></p>
+</body>
+</html>
